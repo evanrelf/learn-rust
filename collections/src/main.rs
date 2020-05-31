@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+// use std::io::Read;
 
 fn mean(numbers: &Vec<i32>) -> Option<f32> {
     if numbers.is_empty() {
@@ -50,11 +51,45 @@ fn mode(numbers: &Vec<i32>) -> Option<i32> {
         .map(|(number, _)| *number)
 }
 
+// fn pig_latin(input: &str) -> String {
+//     if input.is_empty() {
+//         return String::new();
+//     }
+
+//     let head = todo!();
+//     let tail = todo!();
+
+//     if "aeiou".contains(head) {
+//         input.to_owned() + "-hay"
+//     } else {
+//         tail + "-" + head + "ay"
+//     }
+// }
+
+// fn employee_manager() {
+//     let mut employees: HashMap<String, String> = HashMap::new();
+
+//     loop {
+//         let mut input = String::new();
+
+//         std::io::stdin()
+//             .read_line(&mut input)
+//             .expect("Failed to read stdin")
+
+//         input = input.trim();
+//     }
+// }
+
 fn main() {
     let numbers = vec![9, 2, 5, 6, 5, 6, 7, 6, 10];
-
     println!("Numbers: {:?}", numbers);
     println!("Mean:    {:?}", mean(&numbers));
     println!("Median:  {:?}", median(&numbers));
     println!("Mode:    {:?}", mode(&numbers));
+
+    // let words = vec!["first", "apple"];
+    // println!("Words:     {:?}", words);
+    // println!("Pig latin: {:?}", words.iter().map(|word| pig_latin(word)));
+
+    // employee_manager();
 }
